@@ -1,0 +1,16 @@
+langchain
+langchain_community
+langchain_openai
+langchain_chroma
+pypdf
+python-dotenv
+flask
+wekzeug.utils
+PyPDFLoader
+langchain_text.splitter
+dotenv
+pandas
+PIL
+database
+sqlite3
+
