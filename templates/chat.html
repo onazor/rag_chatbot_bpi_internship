@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bria</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles-chat.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script defer src="{{ url_for('static', filename='js/chat.js') }}"></script>
+</head>
+<body>
+    <div class="chat-container">
+        <h1>Business Research and Insights Assistant</h1>
+        
+        <!-- Reload/Reset Button -->
+        <button id="reset-button" onclick="resetSession()">&#x21BA;</button>
+
+        <!-- Chat Window -->
+        <div class="chat-box" id="chat-box">
+            <div class="bot-message">Hi, I am Bria! Feel free to ask me questions related to business!</div>
+        </div>
+
+        <!-- Toast Container for File Upload Status -->
+        <div id="upload-status-container" class="upload-status-container">
+            <p id="upload-status-message"></p>
+        </div>
+
+        <!-- Input Area -->
+        <div class="input-area">
+            <textarea id="question" placeholder="Type your question..."></textarea>
+            
+            <!-- Hidden File Input -->
+            <input
+                type="file"
+                id="uploadFile"
+                style="display: none;"
+                accept=".pdf, .xlsx, .parquet,*/*"
+                onchange="handleFileSelect()"
+            >
+
+            <!-- Custom File Upload Button -->
+            <button id="upload-button" onclick="triggerFileUpload()">Upload</button>
+            <button onclick="askQuestion()">Send</button>
+        </div>
+    </div>
+</body>
+</html>
