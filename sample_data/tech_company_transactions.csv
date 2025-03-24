@@ -1,0 +1,41 @@
+date,transaction_id,description,category,amount,vendor,payment_method
+2023-01-04,TX300001,Cloud server hosting fees,Cloud Infrastructure,4520.75,AWS,Credit Card
+2023-01-05,TX300002,Software development tools licenses,Software Licenses,2150.00,JetBrains,Credit Card
+2023-01-07,TX300003,Office rental - Tech Park,Rent,5800.00,TechSpace Properties,Bank Transfer
+2023-01-10,TX300004,Hardware purchase - Developer laptops,Hardware,8750.60,Apple Inc.,Credit Card
+2023-01-12,TX300005,Software engineer salaries,Payroll,45000.00,Staff Payroll,Bank Transfer
+2023-01-12,TX300006,Product manager salaries,Payroll,15000.00,Staff Payroll,Bank Transfer
+2023-01-12,TX300007,UX/UI designer salaries,Payroll,12000.00,Staff Payroll,Bank Transfer
+2023-01-15,TX300008,SaaS subscription revenue,Revenue,28750.50,Various Customers,Online Payments
+2023-01-18,TX300009,API usage revenue,Revenue,12450.25,Various Customers,Online Payments
+2023-01-20,TX300010,Database service subscription,Cloud Infrastructure,1850.30,MongoDB Atlas,Credit Card
+2023-01-22,TX300011,Professional recruitment service,HR,5000.00,TechTalent Recruiters,Bank Transfer
+2023-01-25,TX300012,Professional development courses,Training,3500.00,Udemy for Business,Credit Card
+2023-01-28,TX300013,Digital marketing campaign,Marketing,7500.00,Google Ads,Credit Card
+2023-01-30,TX300014,Legal services - IP protection,Legal,3250.00,TechLaw Partners,Bank Transfer
+2023-01-31,TX300015,SaaS subscription revenue,Revenue,30120.75,Various Customers,Online Payments
+2023-01-31,TX300016,API usage revenue,Revenue,14250.50,Various Customers,Online Payments
+2023-02-01,TX300017,Team collaboration software,Software Licenses,950.00,Slack,Credit Card
+2023-02-03,TX300018,Project management software,Software Licenses,850.00,Monday.com,Credit Card
+2023-02-05,TX300019,Customer support platform,Software Licenses,1250.00,Zendesk,Credit Card
+2023-02-07,TX300020,Office rental - Tech Park,Rent,5800.00,TechSpace Properties,Bank Transfer
+2023-02-10,TX300021,Content creation for blog,Marketing,1500.00,ContentTech Writers,Bank Transfer
+2023-02-12,TX300022,Software engineer salaries,Payroll,47000.00,Staff Payroll,Bank Transfer
+2023-02-12,TX300023,Product manager salaries,Payroll,15000.00,Staff Payroll,Bank Transfer
+2023-02-12,TX300024,UX/UI designer salaries,Payroll,12000.00,Staff Payroll,Bank Transfer
+2023-02-15,TX300025,Cloud server hosting fees,Cloud Infrastructure,4720.50,AWS,Credit Card
+2023-02-17,TX300026,Code repository hosting,Development Tools,450.00,GitHub,Credit Card
+2023-02-18,TX300027,Team building event,Staff Benefits,1850.00,Escape Room Adventures,Credit Card
+2023-02-20,TX300028,SaaS subscription revenue,Revenue,32500.75,Various Customers,Online Payments
+2023-02-22,TX300029,API usage revenue,Revenue,15750.25,Various Customers,Online Payments
+2023-02-24,TX300030,CI/CD pipeline tools,Development Tools,750.00,CircleCI,Credit Card
+2023-02-25,TX300031,Software testing automation,Development Tools,950.00,BrowserStack,Credit Card
+2023-02-28,TX300032,Technology conference sponsorship,Marketing,7500.00,TechConf 2023,Bank Transfer
+2023-02-28,TX300033,SaaS subscription revenue,Revenue,33750.80,Various Customers,Online Payments
+2023-02-28,TX300034,API usage revenue,Revenue,16250.45,Various Customers,Online Payments
+2023-03-01,TX300035,Data analytics platform,Software Licenses,1850.00,Tableau,Credit Card
+2023-03-03,TX300036,Cybersecurity audit services,Security,5500.00,SecureTech Consultants,Bank Transfer
+2023-03-05,TX300037,Professional development conference,Training,4500.00,DevConf 2023,Credit Card
+2023-03-07,TX300038,Office rental - Tech Park,Rent,5800.00,TechSpace Properties,Bank Transfer
+2023-03-10,TX300039,SEO optimization services,Marketing,2500.00,DigitalGrowth SEO,Bank Transfer
+2023-03-12,TX300040,Software engineer salaries,Payroll,49000.00,Staff Payroll,Bank Transfer 

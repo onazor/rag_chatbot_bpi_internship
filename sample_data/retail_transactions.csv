@@ -1,0 +1,36 @@
+date,transaction_id,description,category,amount,vendor,payment_method
+2023-01-15,TX100001,Inventory purchase - Winter clothing,Inventory,5420.50,StyleFactory Wholesale,Bank Transfer
+2023-01-20,TX100002,Point of sale system monthly fee,Technology,129.99,RetailTech Solutions,Credit Card
+2023-01-22,TX100003,Shelf display units purchase,Store Equipment,1250.00,ShopFittings Inc.,Bank Transfer
+2023-01-25,TX100004,Credit card processing fees,Payment Processing,342.75,PaymentProcess Co.,Direct Debit
+2023-01-28,TX100005,Store rental fee - Main Street location,Rent,2800.00,MainStreet Properties,Bank Transfer
+2023-01-31,TX100006,Sales - Clothing department,Sales Revenue,12540.75,Various Customers,Mixed
+2023-01-31,TX100007,Sales - Accessories department,Sales Revenue,4320.25,Various Customers,Mixed
+2023-02-01,TX100008,Employee wages - 5 sales associates,Payroll,8500.00,Staff Payroll,Bank Transfer
+2023-02-02,TX100009,Utility bills - Electricity,Utilities,425.30,EnergySupply Corp,Direct Debit
+2023-02-05,TX100010,Marketing - Local newspaper advertisement,Marketing,350.00,Daily Chronicle,Credit Card
+2023-02-08,TX100011,Store insurance premium,Insurance,780.00,RetailSafe Insurance,Bank Transfer
+2023-02-10,TX100012,Inventory purchase - Spring collection,Inventory,7650.25,StyleFactory Wholesale,Bank Transfer
+2023-02-12,TX100013,Online shop platform subscription,E-commerce,89.99,ShopifyPlus,Credit Card
+2023-02-15,TX100014,Staff training workshop,Training,450.00,RetailTraining Academy,Credit Card
+2023-02-18,TX100015,Sales - Online store,Sales Revenue,3245.65,Various Customers,Online Payment
+2023-02-20,TX100016,Cleaning service,Maintenance,210.00,CleanTeam Services,Credit Card
+2023-02-22,TX100017,Shopping bags order,Supplies,320.50,EcoBag Solutions,Credit Card
+2023-02-25,TX100018,Mannequin purchase,Store Equipment,890.00,DisplayFashion Inc.,Bank Transfer
+2023-02-28,TX100019,Sales - Clothing department,Sales Revenue,14250.60,Various Customers,Mixed
+2023-02-28,TX100020,Sales - Accessories department,Sales Revenue,5120.30,Various Customers,Mixed
+2023-03-01,TX100021,Employee wages - 5 sales associates,Payroll,8500.00,Staff Payroll,Bank Transfer
+2023-03-03,TX100022,Store rental fee - Main Street location,Rent,2800.00,MainStreet Properties,Bank Transfer
+2023-03-05,TX100023,Inventory purchase - Summer accessories,Inventory,3250.75,AccessoriesWholesale,Bank Transfer
+2023-03-08,TX100024,Social media advertising,Marketing,520.00,FacebookAds,Credit Card
+2023-03-10,TX100025,Security camera system upgrade,Security,1120.45,SecureSight Systems,Bank Transfer
+2023-03-12,TX100026,Customer loyalty program software,Technology,175.99,LoyaltyPlus,Credit Card
+2023-03-15,TX100027,Sales - Online store,Sales Revenue,4120.80,Various Customers,Online Payment
+2023-03-18,TX100028,Retail association membership fee,Membership,350.00,National Retail Association,Credit Card
+2023-03-20,TX100029,Window display design service,Marketing,750.00,VisualMerchandising Pro,Bank Transfer
+2023-03-22,TX100030,Employee benefit - Team lunch,Staff Benefits,240.00,Local Bistro,Credit Card
+2023-03-25,TX100031,Inventory purchase - Shoes collection,Inventory,5870.25,FootwearWholesale Ltd,Bank Transfer
+2023-03-28,TX100032,Returns processing,Returns,-580.50,Various Customers,Mixed
+2023-03-31,TX100033,Sales - Clothing department,Sales Revenue,15780.60,Various Customers,Mixed
+2023-03-31,TX100034,Sales - Accessories department,Sales Revenue,6230.15,Various Customers,Mixed
+2023-03-31,TX100035,Sales - Footwear department,Sales Revenue,7450.30,Various Customers,Mixed 

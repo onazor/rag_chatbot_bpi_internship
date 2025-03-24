@@ -63,8 +63,8 @@ Analyze transaction data to automatically classify businesses into appropriate i
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/bpi-business-banking-bria.git
-cd bpi-business-banking-bria
+git clone https://github.com/yourusername/chatgpt-mvp.git
+cd chatgpt-mvp
 ```
 
 2. Install dependencies:
