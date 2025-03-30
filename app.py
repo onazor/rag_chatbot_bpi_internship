@@ -398,15 +398,40 @@ def chat():
             else:
                 memory.chat_memory.add_ai_message(msg[1])
         
-        # set up tools for the agent
-        retriever = vectorstore.as_retriever()
-        retrieval_tool = RetrievalQA.from_chain_type(llm=llm, retriever=retriever)
+        # Create a retriever with improved search parameters
+        retriever = vectorstore.as_retriever(
+            search_type="mmr",  # Maximum Marginal Relevance
+            search_kwargs={"k": 8, "fetch_k": 20}  # Fetch more candidates and return more results
+        )
+
+        # Create the RetrievalQA chain
+        qa_chain = RetrievalQA.from_chain_type(
+            llm=llm,
+            retriever=retriever,
+            return_source_documents=True  # Keep this True for debugging
+        )
+
+        # Create wrapper function that handles the dictionary return format
+        def retrieval_tool_func(query: str) -> str:
+            """Extract information from documents in the vector store."""
+            try:
+                # The chain returns a dict with 'result' and 'source_documents' keys
+                chain_result = qa_chain({"query": query})
+                
+                # Extract just the result text for the Tool
+                if isinstance(chain_result, dict) and "result" in chain_result:
+                    return chain_result["result"]
+                else:
+                    return str(chain_result)
+            except Exception as e:
+                return f"Error searching documents: {str(e)}. Please try a different query."
         
+        # set up tools for the agent
         tools = [
             Tool(
                 name="Document_Retrieval",
-                func=retrieval_tool.run,
-                description="Retrieve answers from local database of uploaded files."
+                func=retrieval_tool_func,  # Use our custom wrapper
+                description="Retrieve answers from local database of uploaded files. Use this for any questions about uploaded documents or company information."
             ),
             Tool(
                 name="Generate_Tavily_Instructions",
@@ -428,7 +453,14 @@ def chat():
         # set up agent with specific workflow instructions
         prefix = """You are a helpful assistant specializing in banking and finance, particularly for Business Banking at BPI. You work with both documents and web searches.
 
-        VERY IMPORTANT: You must ONLY answer questions related to any types of businesses, business banking, finance, or your specific capabilities. If a user asks about topics outside this scope (like general knowledge questions, math problems, coding help, or other non-banking topics), politely explain that you can only provide assistance with business banking related matters.
+        VERY IMPORTANT: You can answer questions related to:
+        1. Any types of businesses and their operations
+        2. Business banking services and products
+        3. Finance and financial advice
+        4. Information about specific industries or companies
+        5. Local businesses and market trends
+
+        This includes providing information about food businesses, trendy establishments, seasonal business trends, and other business-related topics which are relevant for understanding potential client needs.
 
         For every user query, follow these steps:
         1. Use "Document_Retrieval" to search the local database.
@@ -477,10 +509,9 @@ def chat():
 
         ALWAYS FORMAT YOUR RESPONSES IN MARKDOWN:
         - Use **bold text** for all important information, key facts, names, figures, and highlights
-        - Use #730007 as the primary color reference for important headings
-        - Use #b70c1a as the secondary color reference for links and highlights
+        - Use ## for main headings (e.g., ## Forex Businesses in Makati)
+        - Use ### for subheadings to organize information clearly
         - Format all links as [descriptive link text](URL) to make them clickable
-        - Use ## for main headings and ### for subheadings to organize information clearly
         - Use bullet points (- item) for lists of related items
         - Use numbered lists (1. step) for sequential steps or ranked items
         - Use blockquotes (> text) for direct quotes or important notes
@@ -576,7 +607,7 @@ def reset():
     try:
         # Clear session messages (but maintain session) - UPDATED SYSTEM PROMPT
         session['messages'] = [
-            {"role": "system", "content": "You are Bria, a helpful assistant for BPI. You can provide information on any topic including business banking, finance, specific businesses, and other general knowledge topics."}
+            {"role": "system", "content": "You are Bria, a helpful assistant for BPI. You can provide information on businesses, business banking, finance, specific businesses, and other business-related topics including market trends and industry information."}
         ]
         
         # Clear database chat history
